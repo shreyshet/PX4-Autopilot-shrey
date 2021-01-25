@@ -1,0 +1,11 @@
+commands for multi vehicle sim -- 	
+1. (terminal) goto PX4-Autopilot directory 
+2. copy,paste (cp) the following (there should not be any error, if there is there is issue with git or make):
+	git submodule update --init --recursive
+	DONT_RUN=1 make px4_sitl_default gazebo 
+3. Source the workspace as follows ( do copy,paste )
+	source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
+	export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd):$(pwd)/Tools/sitl_gazebo
+4. Run the launch file as follows:
+	roslaunch px4 multi_uav_mavros_sitl.launch
+
