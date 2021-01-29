@@ -9,3 +9,5 @@ commands for multi vehicle sim --
 4. Run the launch file as follows:
 	roslaunch px4 multi_uav_mavros_sitl.launch
 
+test - 1
+
